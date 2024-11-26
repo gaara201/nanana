@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyLittle</title>
+  <style>
+    body{
+        background-color: red;
+    }
+    .painel{
+        background-color: white;
+        margin:auto;
+        width: 500px;
+        height: 500px;
+        border-radius: 40px;
+        text-align: center;
+        padding-top: 50px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-shadow: 50px 20px 30px red;
+    }
+    #sim{
+        
+        height: 40px;
+        width: 70px;
+        background-color: red;
+        border:2px solid white;
+        border-radius: 10px;
+        color: white;
+        margin-left: -70px;
+
+    }
+    #nao{
+        position: absolute;
+        
+        height: 40px;
+        width: 70px;
+        background-color: red;
+        border:2px solid white;
+        border-radius: 10px;
+        color: white;
+        margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+    <div class="painel">
+        <h2> BEM VINDA AO TEU SITE NENÉM</h2>
+        <img src="https://i.pinimg.com/originals/0a/b0/a4/0ab0a452be6e10843b929cb59ab49e51.gif" alt=""> 
+        <h5>QUEM É A MENINA MAIS LINDA DO MUNDO?</h5>
+       
+        <button id="sim" onclick="parabens()">LARISSA</button>
+        <button onmouseover="fuja()" id="nao">OUTRAS</button>
+         
+    </div>  
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY  = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX= Math.floor(Math.random()* maxX);
+            var aleatorioY= Math.floor(Math.random()* maxY);
+
+            botaoNao.style.left=aleatorioX + "px";
+            botaoNao.style.top=aleatorioY + "px";
+            
+            
+            
+
+        }
+
+function parabens(){
+alert("ACERTOUUUUUUUU:)       neném mais linda do mundooooooooooooo; abacho te gosto mt mt mt mt")
+
+}
+    </script>
+</body>
+</html>
